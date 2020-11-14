@@ -10,8 +10,8 @@
 
 class Song
   attr_accessor :name, :artist, :genre
-# @@ count keeps track of the number of new songs that are 
-# created from the Song class. Set this variable 
+# @@ count keeps track of the number of new songs that are
+# created from the Song class. Set this variable
 # equal to 0.
   @@count = 0
   @@genres = []
@@ -21,14 +21,14 @@ class Song
     @name = name
     @artist = artist
     @genre = genre
-# When should you add genres to the array? Whenever a new song is 
-# created. Your #initialize method should add the genre of 
+# When should you add genres to the array? Whenever a new song is
+# created. Your #initialize method should add the genre of
 # the song being created to the @@genres array. 
     @@genres << genre
     @@artists << artist
     @@count += 1
   end
-# Write a class method, .count, that returns 
+# Write a class method, .count, that returns
 # the total number of songs created.
   def self.count
     @@count
@@ -37,10 +37,10 @@ class Song
   def self.artists
     @@artists.uniq
   end
-# Write a class method, .genres that returns an 
-# array of all of the genres of existing songs. 
-# This array should contain only unique 
-# genres––no duplicates! 
+# Write a class method, .genres that returns an
+# array of all of the genres of existing songs.
+# This array should contain only unique
+# genres––no duplicates!
   def self.genres
     @@genres.uniq
   end
